@@ -33,7 +33,6 @@ public class BufferScanner implements AutoCloseable {
         return isInteger(token);
     }
 
-    //              to CHANGE
     public boolean hasNextLine() throws IOException { 
         return in.ready();
     }
