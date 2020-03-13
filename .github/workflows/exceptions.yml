@@ -1,0 +1,28 @@
+name: Exceptions Tests
+
+on:
+  [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11.0.4'
+    - name: Compile
+      run: javac exceptionsExpression/*.java exceptionsExpression/test/*.java
+    - name: Run ExceptionsTest Easy
+      run: java -ea exceptionsExpression/test/ExceptionsTest easy
+    - name: Run ExceptionsPowLogTest Easy
+      run: java -ea exceptionsExpression/test/ExceptionsPowLogTest easy
+    - name: Run ExceptionsTest Hard
+      run: java -ea exceptionsExpression/test/ExceptionsTest hard
+    - name: Run ExceptionsPowLogTest Hard
+      run: java -ea exceptionsExpression/test/ExceptionsPowLogTest hard
+
+      

@@ -19,5 +19,5 @@ jobs:
     - name: Run Md2HtmlTest
       run: java md2html/test/Md2HtmlTest
     - name: Run Md2HtmlLinkTest
-      run: java md2html/test/Md2HtmlLink
+      run: java md2html/test/Md2HtmlLinkTest
       
