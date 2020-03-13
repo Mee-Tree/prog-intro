@@ -1,0 +1,32 @@
+name: Expression Tests
+
+on:
+  [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11.0.4'
+    - name: Compile
+      run: javac expression/*.java expression/test/*.java
+    - name: Run ExpressionTest Easy
+      run: java -ea expression/test/ExpressionTest easy
+    - name: Run DoubleExpressionTest Easy
+      run: java -ea expression/test/DoubleExpressionTest easy
+    - name: Run TripleExpressionTest Easy
+      run: java -ea expression/test/TripleExpressionTest easy
+    - name: Run ExpressionTest Hard
+      run: java -ea expression/test/ExpressionTest hard
+    - name: Run DoubleExpressionTest Hard
+      run: java -ea expression/test/DoubleExpressionTest hard
+    - name: Run TripleExpressionTest Hard
+      run: java -ea expression/test/TripleExpressionTest hard
+
+      

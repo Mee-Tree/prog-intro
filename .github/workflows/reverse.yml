@@ -1,0 +1,29 @@
+name: Reverse Tests
+
+on:
+  [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11.0.4'
+    - name: Compile
+      run: javac reverse/*.java reverse/test/*.java
+    - name: Run ReverseTest
+      run: java reverse/test/ReverseTest
+    - name: Run ReverseMinTest
+      run: java reverse/test/ReverseMinTest
+    - name: Run ReverseSumTest
+      run: java reverse/test/ReverseSumTest
+    - name: Run FastReverseTest
+      run: java reverse/test/FastReverseTest
+    - name: Run FastReverseMinTest
+      run: java reverse/test/FastReverseMinTest
+      

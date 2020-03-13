@@ -1,0 +1,25 @@
+name: Markdown Tests
+
+on:
+  [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11.0.4'
+    - name: Compile
+      run: javac markup/*.java markup/test/*.java
+    - name: Run MarkdownTest
+      run: java markup/test/MarkdownTest
+    - name: Run TexTest
+      run: java markup/test/TexTest
+    - name: Run TexListTest
+      run: java markup/test/TexListTest
+      

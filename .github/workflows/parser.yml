@@ -1,0 +1,36 @@
+name: Parser Tests
+
+on:
+  [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11.0.4'
+    - name: Compile
+      run: javac parserExpression/*.java parserExpression/test/*.java
+    - name: Run ParserTest Easy
+      run: java -ea parserExpression/test/ParserTest easy
+    - name: Run ParserShiftsTest Easy
+      run: java -ea parserExpression/test/ParserShiftsTest easy
+    - name: Run ParserAbsSquareTest Easy
+      run: java -ea parserExpression/test/ParserAbsSquareTest easy
+    - name: Run ParserReverseDigitsTest Easy
+      run: java -ea parserExpression/test/ParserReverseDigitsTest easy
+    - name: Run ParserTest Hard
+      run: java -ea parserExpression/test/ParserTest hard
+    - name: Run ParserShiftsTest Hard
+      run: java -ea parserExpression/test/ParserShiftsTest hard
+    - name: Run ParserAbsSquareTest Hard
+      run: java -ea parserExpression/test/ParserAbsSquareTest hard
+    - name: Run ParserReverseDigitsTest Hard
+      run: java -ea parserExpression/test/ParserReverseDigitsTest hard
+
+      

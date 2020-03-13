@@ -1,6 +1,7 @@
-package expression.test;
+package parserExpression.test;
 
-import expression.*;
+import parserExpression.*;
+
 /**
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */

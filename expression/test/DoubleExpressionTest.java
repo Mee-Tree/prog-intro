@@ -1,7 +1,6 @@
-package expression;
+package expression.test;
 
 import expression.*;
-
 /**
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */

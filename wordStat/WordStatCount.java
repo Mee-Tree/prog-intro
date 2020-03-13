@@ -1,3 +1,6 @@
+package wordStat;
+
+import scanners.Scanner;
 import java.io.*;
 import java.util.*;
 
@@ -56,7 +59,7 @@ public class WordStatCount{
         
         try {
             BufferedWriter writer = new BufferedWriter(
-                new OutputStreamWriter(new FileOutputStream(args[1]), "utf8")
+                new OutputStreamWriter(new FileOutputStream(args[1]), "UTF-8")
             );
             try {
                 for (int i = 0; i < arr.size(); ++i) {
