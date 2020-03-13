@@ -1,4 +1,4 @@
-name: ReverseMinTest
+name: FastReverseMinTest
 
 on:
   [push]
@@ -15,7 +15,7 @@ jobs:
       with:
         java-version: '11.0.4'
     - name: Compile
-      run: javac reverse/*.java
+      run: javac reverse/*.java reverse/test/*.java
     - name: Run tests
-      run: java -jar reverse/test/artifacts_reverse_FastReverseMinTest.jar
+      run: java reverse/test/FastReverseMinTest
       
