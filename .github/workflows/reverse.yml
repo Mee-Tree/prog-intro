@@ -17,5 +17,5 @@ jobs:
     - name: Compile
       run: javac reverse/*.java
     - name: Run tests
-      run: java -jar reverse/test/artifacts_reverse_FastReverseMinTest
+      run: java -jar reverse/test/artifacts_reverse_FastReverseMinTest.jar
       
