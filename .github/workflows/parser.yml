@@ -30,15 +30,15 @@ jobs:
       run: java -ea tests/parser/ParserReverseDigitsTest easy
     
     - name: Run ParserTest Hard
-      run: java -ea tests/parser/test/ParserTest hard
+      run: java -ea tests/parser/ParserTest hard
     
     - name: Run ParserShiftsTest Hard
-      run: java -ea tests/parser/test/ParserShiftsTest hard
+      run: java -ea tests/parser/ParserShiftsTest hard
     
     - name: Run ParserAbsSquareTest Hard
-      run: java -ea tests/parser/test/ParserAbsSquareTest hard
+      run: java -ea tests/parser/ParserAbsSquareTest hard
     
     - name: Run ParserReverseDigitsTest Hard
-      run: java -ea tests/parser/test/ParserReverseDigitsTest hard
+      run: java -ea tests/parser/ParserReverseDigitsTest hard
 
       
