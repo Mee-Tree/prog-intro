@@ -1,4 +1,6 @@
-import java.util.*;
+package scanners;
+
+import java.util.NoSuchElementException;
 import java.io.*;
 
 public class FastScanner implements AutoCloseable { 
