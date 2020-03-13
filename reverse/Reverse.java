@@ -1,3 +1,6 @@
+package prog-intro.reverse;
+
+import prog-intro.scanners.Scanner;
 import java.io.*;
 import java.util.Arrays;
 
