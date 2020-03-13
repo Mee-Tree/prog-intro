@@ -1,7 +1,7 @@
 package expression;
 
 public class Divide extends AbstractBinaryOperator {
-    public Divide(PriorityExpression first, PriorityExpression second) {
+    public Divide(CommonExpression first, CommonExpression second) {
         super(first, second, 2);
     }
 

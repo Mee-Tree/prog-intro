@@ -1,3 +1,6 @@
+package wordStat;
+
+import scanners.Scanner;
 import java.io.*;
 import java.util.*;
 

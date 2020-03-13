@@ -1,7 +1,7 @@
 package expression;
 
 public class Multiply extends AbstractBinaryOperator {
-    public Multiply(PriorityExpression first, PriorityExpression second) {
+    public Multiply(CommonExpression first, CommonExpression second) {
         super(first, second, 2);
     }
 

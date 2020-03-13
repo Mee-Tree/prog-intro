@@ -1,11 +1,11 @@
 package expression;
 
-public abstract class AbstractBinaryOperator implements PriorityExpression {
-    protected final PriorityExpression first;
-    protected final PriorityExpression second;
+public abstract class AbstractBinaryOperator implements CommonExpression {
+    protected final CommonExpression first;
+    protected final CommonExpression second;
     protected final int priority;
 
-    protected AbstractBinaryOperator(PriorityExpression first, PriorityExpression second, int priority) {
+    protected AbstractBinaryOperator(CommonExpression first, CommonExpression second, int priority) {
         this.first = first;
         this.second = second;
         this.priority = priority;
@@ -47,18 +47,18 @@ public abstract class AbstractBinaryOperator implements PriorityExpression {
         return "(" + first.toString() + operation + second.toString() + ")";
     }
 
-    public String wrap(PriorityExpression expression, boolean brackets) {
+    public String wrap(CommonExpression expression, boolean brackets) {
         if (brackets) {
             return "(" + expression.toMiniString() + ")";
         }
         return expression.toMiniString();
     }
 
-    private boolean checkPriority(PriorityExpression expression) {
+    private boolean checkPriority(CommonExpression expression) {
         return priority > expression.getPriority();
     }
 
-    private boolean checkImportant(PriorityExpression expression) {
+    private boolean checkImportant(CommonExpression expression) {
         return priority == expression.getPriority() && (this.isImportant() || expression.isImportant());
     }
 

@@ -1,6 +1,6 @@
 package expression;
 
-public class Const implements PriorityExpression {
+public class Const implements CommonExpression {
     private final Number number;
 
     public Const(Number number) {

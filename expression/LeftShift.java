@@ -1,0 +1,28 @@
+package expression;
+
+public class LeftShift extends AbstractBinaryOperator {
+    public LeftShift(CommonExpression first, CommonExpression second) {
+        super(first, second, 0);
+    }
+
+    protected double calculate(double a, double b) {
+        // does not support double
+        return 0;
+    }
+
+    protected int calculate(int a, int b) {
+        return a << b;
+    }
+
+    public String toMiniString() {
+        return toMiniString(" << ");
+    }
+
+    public String toString() {
+        return toString(" << ");
+    }
+
+    public boolean isImportant() {
+        return false;
+    }
+}

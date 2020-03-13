@@ -1,6 +1,6 @@
 package expression;
 
-public class Variable implements PriorityExpression {
+public class Variable implements CommonExpression {
     private final String name;
 
     public Variable(String name) {

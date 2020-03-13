@@ -1,0 +1,25 @@
+name: Md2Html Tests
+
+on:
+  [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11.0.4'
+    - name: Compile
+      run: javac -encoding utf-8 md2html/*.java tests/md2html/*.java
+    
+    - name: Run Md2HtmlTest
+      run: java tests/md2html/Md2HtmlTest
+    
+    - name: Run Md2HtmlLinkTest
+      run: java tests/md2html/Md2HtmlLinkTest
+      
